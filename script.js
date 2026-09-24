@@ -49,12 +49,52 @@ fetch("data.json")
                         <h3>${ambulance.driverName}</h3>
                         <p>Ambulance: ${ambulance.ambulanceNumber}</p>
                         <p>Location: ${ambulance.location}</p>
+                        <p>Mobile: ${ambulance.mobileNumber}</p>
+
                         <span class="available">Available</span>
                     </div>
                 </div>
             `,
       )
       .join("");
+
+      // Medicine & Medical Equipment
+document.getElementById("medicine-container").innerHTML =
+  data.medicineStores
+    .map(
+      (store) => `
+        <a href="${store.website}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="card">
+
+          <img
+            src="${store.image}"
+            class="card-image"
+            alt="${store.name}"
+          >
+
+          <div class="card-content">
+            <h3>${store.name}</h3>
+
+            <p>${store.description}</p>
+
+            <span class="guide-category">
+              ${store.category}
+            </span>
+
+            <br>
+
+            <span class="card-link">
+              Visit Website
+            </span>
+          </div>
+
+        </a>
+      `,
+    )
+    .join("");
+
 
     // Medical guides
     document.getElementById("guide-container").innerHTML = data.medicalGuides

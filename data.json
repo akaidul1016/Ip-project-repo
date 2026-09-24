@@ -82,7 +82,7 @@
     },
     {
       "id": 2,
-      "name": "Dr. Nusrat Jahan",
+      "name": "Dr. Amin Khan",
       "specialization": "Medicine Specialist",
       "hospital": "Chattogram Medical College Hospital",
       "image": "images/doctors/doctor1.jpg"
@@ -151,6 +151,7 @@
       "driverName": "Arif Hossain",
       "ambulanceNumber": "SM-AMB-001",
       "location": "Panchlaish",
+        "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -158,13 +159,15 @@
       "driverName": "Rahim Uddin",
       "ambulanceNumber": "SM-AMB-002",
       "location": "Agrabad",
+                  "mobileNumber": "01234562784",
       "available": true
     },
     {
       "id": 3,
       "driverName": "Sakib Hasan",
       "ambulanceNumber": "SM-AMB-003",
-      "location": "GEC Circle",
+      "location": "GEC Circle",          
+        "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -172,6 +175,7 @@
       "driverName": "Tanvir Ahmed",
       "ambulanceNumber": "SM-AMB-004",
       "location": "O.R. Nizam Road",
+       "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -179,6 +183,7 @@
       "driverName": "Imran Kabir",
       "ambulanceNumber": "SM-AMB-005",
       "location": "Chawkbazar",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -186,6 +191,7 @@
       "driverName": "Nayeem Islam",
       "ambulanceNumber": "SM-AMB-006",
       "location": "Muradpur",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -193,6 +199,7 @@
       "driverName": "Fahim Rahman",
       "ambulanceNumber": "SM-AMB-007",
       "location": "Halishahar",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -200,6 +207,7 @@
       "driverName": "Rashed Karim",
       "ambulanceNumber": "SM-AMB-008",
       "location": "Kotwali",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -207,6 +215,7 @@
       "driverName": "Shakil Ahmed",
       "ambulanceNumber": "SM-AMB-009",
       "location": "Nasirabad",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -214,6 +223,7 @@
       "driverName": "Mehedi Hasan",
       "ambulanceNumber": "SM-AMB-010",
       "location": "Khulshi",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -221,6 +231,7 @@
       "driverName": "Rafiul Islam",
       "ambulanceNumber": "SM-AMB-011",
       "location": "Bahaddarhat",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -228,6 +239,7 @@
       "driverName": "Jahid Hasan",
       "ambulanceNumber": "SM-AMB-012",
       "location": "Bakalia",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -235,6 +247,7 @@
       "driverName": "Siam Chowdhury",
       "ambulanceNumber": "SM-AMB-013",
       "location": "EPZ",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -242,6 +255,7 @@
       "driverName": "Hasan Mahmud",
       "ambulanceNumber": "SM-AMB-014",
       "location": "Patenga",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -249,6 +263,7 @@
       "driverName": "Rakibul Hasan",
       "ambulanceNumber": "SM-AMB-015",
       "location": "Khatunganj",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -256,6 +271,7 @@
       "driverName": "Sabbir Ahmed",
       "ambulanceNumber": "SM-AMB-016",
       "location": "Lalkhan Bazar",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -263,6 +279,7 @@
       "driverName": "Moin Uddin",
       "ambulanceNumber": "SM-AMB-017",
       "location": "Jamal Khan",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -270,6 +287,7 @@
       "driverName": "Adnan Hossain",
       "ambulanceNumber": "SM-AMB-018",
       "location": "Katalganj",
+      "mobileNumber": "01234562784",
       "available": true
     },
     {
@@ -277,6 +295,7 @@
       "driverName": "Shuvo Das",
       "ambulanceNumber": "SM-AMB-019",
       "location": "Oxygen",
+      "mobileNumber": "01234562784z",
       "available": true
     },
     {
@@ -284,6 +303,7 @@
       "driverName": "Fardin Ahmed",
       "ambulanceNumber": "SM-AMB-020",
       "location": "Bayezid",
+      "mobileNumber": "01234562784",
       "available": true
     }
   ],
@@ -394,5 +414,58 @@
       "image": "images/guides/seizure.jpg",
       "website": "https://en.wikipedia.org/wiki/Seizure"
     }
+    ],
+    
+  "medicineStores": 
+    [
+  {
+    "id": 1,
+    "name": "MedEasy",
+    "description": "Online medicines and healthcare products.",
+    "category": "Medicine & Healthcare",
+    "image": "images/medicine/medeasy.jpg",
+    "website": "https://medeasy.health/"
+  },
+  {
+    "id": 2,
+    "name": "Arogga",
+    "description": "Online pharmacy and healthcare products.",
+    "category": "Medicine & Healthcare",
+    "image": "images/medicine/arogga.jpg",
+    "website": "https://www.arogga.com/"
+  },
+  {
+    "id": 3,
+    "name": "Shefa Pharma",
+    "description": "Online pharmacy and healthcare products.",
+    "category": "Medicine & Healthcare",
+    "image": "images/medicine/shefa-pharma.jpg",
+    "website": "https://www.shefapharma.com/"
+  },
+  {
+    "id": 4,
+    "name": "MediPlus-BD",
+    "description": "Medicines, medical equipment and healthcare products.",
+    "category": "Medicine & Medical Equipment",
+    "image": "images/medicine/mediplus.jpg",
+    "website": "https://mediplusbd.com/"
+  },
+  {
+    "id": 5,
+    "name": "Care-Box",
+    "description": "Medical equipment, surgical products and healthcare supplies.",
+    "category": "Medical Equipment",
+    "image": "images/medicine/care-box.jpg",
+    "website": "https://www.care-box.com/"
+  },
+  {
+    "id": 6,
+    "name": "UniPharma",
+    "description": "Online pharmacy offering medicines and medical devices.",
+    "category": "Medicine & Medical Devices",
+    "image": "images/medicine/unipharma.jpg",
+    "website": "https://www.unipharmabd.com/"
+  }
   ]
+
 }
