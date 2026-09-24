@@ -1,46 +1,36 @@
 fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
+    const render = (id, items, template) => {
+      document.getElementById(id).innerHTML = items.map(template).join("");
+    };
+
     // Doctors
-    document.getElementById("doctor-container").innerHTML = data.doctors
-      .map(
-        (doctor) => `
-                <div class="card">
-                    <img src="${doctor.image}" class="card-image">
-                    <div class="card-content">
-                        <h3>${doctor.name}</h3>
-                        <p>${doctor.specialization}</p>
-                        <p>${doctor.hospital}</p>
-                    </div>
-                </div>
-            `,
-      )
-      .join("");
+    render("doctor-container", data.doctors, (doctor) => `
+      <div class="card">
+        <img src="${doctor.image}" class="card-image">
+        <div class="card-content">
+          <h3>${doctor.name}</h3>
+          <p>${doctor.specialization}</p>
+          <p>${doctor.hospital}</p>
+        </div>
+      </div>
+    `);
 
     // Hospitals
-    document.getElementById("hospital-container").innerHTML = data.hospitals
-      .map(
-        (hospital) => `
-                <a href="${hospital.website}"
-                   target="_blank"
-                   class="card">
-
-                    <img src="${hospital.image}" class="card-image">
-
-                    <div class="card-content">
-                        <h3>${hospital.name}</h3>
-                        <p>${hospital.location}</p>
-                        <span class="card-link">
-                            Visit Website
-                        </span>
-                    </div>
-
-                </a>
-            `,
-      )
-      .join("");
+    render("hospital-container", data.hospitals, (hospital) => `
+      <a href="${hospital.website}" target="_blank" class="card">
+        <img src="${hospital.image}" class="card-image">
+        <div class="card-content">
+          <h3>${hospital.name}</h3>
+          <p>${hospital.location}</p>
+          <span class="card-link">Visit Website</span>
+        </div>
+      </a>
+    `);
 
     // Ambulances
+ HEAD
     document.getElementById("ambulance-container").innerHTML = data.ambulances
       .map(
         (ambulance) => `
@@ -57,6 +47,7 @@ fetch("data.json")
             `,
       )
       .join("");
+
 
       // Medicine & Medical Equipment
 document.getElementById("medicine-container").innerHTML =
@@ -97,43 +88,28 @@ document.getElementById("medicine-container").innerHTML =
 
 
     // Medical guides
-    document.getElementById("guide-container").innerHTML = data.medicalGuides
-      .map(
-        (guide) => `
-        <a href="${guide.website}"
-           target="_blank"
-           class="card">
-
-        
-
-            <div class="card-content">
-                <h3>${guide.name}</h3>
-                <p>${guide.description}</p>
-
-                <span class="card-link">
-                    Read Guide
-                </span>
-            </div>
-
-        </a>
-    `,
-      )
-      .join("");
+    render("guide-container", data.medicalGuides, (guide) => `
+      <a href="${guide.website}" target="_blank" class="card">
+        <div class="card-content">
+          <h3>${guide.name}</h3>
+          <p>${guide.description}</p>
+          <span class="card-link">Read Guide</span>
+        </div>
+      </a>
+    `);
 
     // Hospital slideshow
     let slide = 0;
 
-    function showHospital() {
-      document.getElementById("hospital-slider-image").src =
-        data.hospitals[slide].image;
+    const showHospital = () => {
+      const hospital = data.hospitals[slide];
 
-      document.getElementById("hospital-slider-name").textContent =
-        data.hospitals[slide].name;
+      document.getElementById("hospital-slider-image").src = hospital.image;
+      document.getElementById("hospital-slider-name").textContent = hospital.name;
 
       slide = (slide + 1) % data.hospitals.length;
-    }
+    };
 
     showHospital();
-
     setInterval(showHospital, 2000);
   });
