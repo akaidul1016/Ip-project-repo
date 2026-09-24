@@ -1,0 +1,370 @@
+```json
+{
+  "hospitals": [
+    {
+      "id": 1,
+      "name": "Chattogram Medical College Hospital",
+      "location": "Panchlaish, Chattogram",
+      "website": "https://cmch.gov.bd/",
+      "image": "images/hospitals/hospital1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Chattogram 250 Bed General Hospital",
+      "location": "Anderkilla, Chattogram",
+      "website": "#",
+      "image": "images/hospitals/hospital2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Chattogram Maa-O-Shishu Hospital",
+      "location": "Agrabad, Chattogram",
+      "website": "https://www.cmoshbd.org/",
+      "image": "images/hospitals/hospital3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Chattagram Metropolitan Hospital Limited",
+      "location": "O.R. Nizam Road, Chattogram",
+      "website": "https://www.ctgmhpl.com/",
+      "image": "images/hospitals/hospital4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "National Hospital Chattogram",
+      "location": "Mehedibug, Chattogram",
+      "website": "https://nationalhospital.com.bd/",
+      "image": "images/hospitals/hospital5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Parkview Hospital Limited",
+      "location": "Panchlaish, Chattogram",
+      "website": "#",
+      "image": "images/hospitals/hospital6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Evercare Hospital Chattogram",
+      "location": "Anannya CDA, Chattogram",
+      "website": "https://www.evercarebd.com/chattogram/",
+      "image": "images/hospitals/hospital7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Apollo Imperial Hospitals",
+      "location": "Zakir Hossain Road, Chattogram",
+      "website": "https://www.imperialhospitalbd.com/",
+      "image": "images/hospitals/hospital8.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Chattogram International Medical College Hospital",
+      "location": "Chandgaon, Chattogram",
+      "website": "#",
+      "image": "images/hospitals/hospital9.jpg"
+    },
+    {
+      "id": 10,
+      "name": "LABAID Specialized Hospital Chattogram",
+      "location": "O.R. Nizam Road, Chattogram",
+      "website": "https://labaid.com.bd/",
+      "image": "images/hospitals/hospital10.jpg"
+    }
+  ],
+
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Ahmed Rahman",
+      "specialization": "Medicine Specialist",
+      "hospital": "Chattogram Medical College Hospital",
+      "image": "images/doctors/doctor1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Nusrat Jahan",
+      "specialization": "Cardiologist",
+      "hospital": "Evercare Hospital Chattogram",
+      "image": "images/doctors/doctor2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Farhan Kabir",
+      "specialization": "Neurologist",
+      "hospital": "Apollo Imperial Hospitals",
+      "image": "images/doctors/doctor3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Dr. Sadia Islam",
+      "specialization": "Pediatrician",
+      "hospital": "Chattogram Maa-O-Shishu Hospital",
+      "image": "images/doctors/doctor4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Dr. Tanvir Hasan",
+      "specialization": "Orthopedic Specialist",
+      "hospital": "Parkview Hospital Limited",
+      "image": "images/doctors/doctor5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Dr. Samira Chowdhury",
+      "specialization": "Dermatologist",
+      "hospital": "National Hospital Chattogram",
+      "image": "images/doctors/doctor6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Dr. Mahmudul Hasan",
+      "specialization": "General Surgeon",
+      "hospital": "Chattagram Metropolitan Hospital Limited",
+      "image": "images/doctors/doctor7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Dr. Rafia Sultana",
+      "specialization": "Gynecologist",
+      "hospital": "Chattogram International Medical College Hospital",
+      "image": "images/doctors/doctor8.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Dr. Imran Hossain",
+      "specialization": "ENT Specialist",
+      "hospital": "LABAID Specialized Hospital Chattogram",
+      "image": "images/doctors/doctor9.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Dr. Saif Ahmed",
+      "specialization": "Ophthalmologist",
+      "hospital": "Chattogram Medical College Hospital",
+      "image": "images/doctors/doctor10.jpg"
+    }
+  ],
+
+  "ambulances": [
+    {
+      "id": 1,
+      "driverName": "Arif Hossain",
+      "ambulanceNumber": "SM-AMB-001",
+      "location": "Panchlaish",
+      "available": true
+    },
+    {
+      "id": 2,
+      "driverName": "Rahim Uddin",
+      "ambulanceNumber": "SM-AMB-002",
+      "location": "Agrabad",
+      "available": true
+    },
+    {
+      "id": 3,
+      "driverName": "Sakib Hasan",
+      "ambulanceNumber": "SM-AMB-003",
+      "location": "GEC Circle",
+      "available": true
+    },
+    {
+      "id": 4,
+      "driverName": "Tanvir Ahmed",
+      "ambulanceNumber": "SM-AMB-004",
+      "location": "O.R. Nizam Road",
+      "available": true
+    },
+    {
+      "id": 5,
+      "driverName": "Imran Kabir",
+      "ambulanceNumber": "SM-AMB-005",
+      "location": "Chawkbazar",
+      "available": true
+    },
+    {
+      "id": 6,
+      "driverName": "Nayeem Islam",
+      "ambulanceNumber": "SM-AMB-006",
+      "location": "Muradpur",
+      "available": true
+    },
+    {
+      "id": 7,
+      "driverName": "Fahim Rahman",
+      "ambulanceNumber": "SM-AMB-007",
+      "location": "Halishahar",
+      "available": true
+    },
+    {
+      "id": 8,
+      "driverName": "Rashed Karim",
+      "ambulanceNumber": "SM-AMB-008",
+      "location": "Kotwali",
+      "available": true
+    },
+    {
+      "id": 9,
+      "driverName": "Shakil Ahmed",
+      "ambulanceNumber": "SM-AMB-009",
+      "location": "Nasirabad",
+      "available": true
+    },
+    {
+      "id": 10,
+      "driverName": "Mehedi Hasan",
+      "ambulanceNumber": "SM-AMB-010",
+      "location": "Khulshi",
+      "available": true
+    },
+    {
+      "id": 11,
+      "driverName": "Rafiul Islam",
+      "ambulanceNumber": "SM-AMB-011",
+      "location": "Bahaddarhat",
+      "available": true
+    },
+    {
+      "id": 12,
+      "driverName": "Jahid Hasan",
+      "ambulanceNumber": "SM-AMB-012",
+      "location": "Bakalia",
+      "available": true
+    },
+    {
+      "id": 13,
+      "driverName": "Siam Chowdhury",
+      "ambulanceNumber": "SM-AMB-013",
+      "location": "EPZ",
+      "available": true
+    },
+    {
+      "id": 14,
+      "driverName": "Hasan Mahmud",
+      "ambulanceNumber": "SM-AMB-014",
+      "location": "Patenga",
+      "available": true
+    },
+    {
+      "id": 15,
+      "driverName": "Rakibul Hasan",
+      "ambulanceNumber": "SM-AMB-015",
+      "location": "Khatunganj",
+      "available": true
+    },
+    {
+      "id": 16,
+      "driverName": "Sabbir Ahmed",
+      "ambulanceNumber": "SM-AMB-016",
+      "location": "Lalkhan Bazar",
+      "available": true
+    },
+    {
+      "id": 17,
+      "driverName": "Moin Uddin",
+      "ambulanceNumber": "SM-AMB-017",
+      "location": "Jamal Khan",
+      "available": true
+    },
+    {
+      "id": 18,
+      "driverName": "Adnan Hossain",
+      "ambulanceNumber": "SM-AMB-018",
+      "location": "Katalganj",
+      "available": true
+    },
+    {
+      "id": 19,
+      "driverName": "Shuvo Das",
+      "ambulanceNumber": "SM-AMB-019",
+      "location": "Oxygen",
+      "available": true
+    },
+    {
+      "id": 20,
+      "driverName": "Fardin Ahmed",
+      "ambulanceNumber": "SM-AMB-020",
+      "location": "Bayezid",
+      "available": true
+    }
+  ],
+
+  "medicalGuides": [
+    {
+      "id": 1,
+      "title": "Severe Bleeding",
+      "category": "Emergency"
+    },
+    {
+      "id": 2,
+      "title": "Burn",
+      "category": "Emergency"
+    },
+    {
+      "id": 3,
+      "title": "Head Injury",
+      "category": "Emergency"
+    },
+    {
+      "id": 4,
+      "title": "Fracture",
+      "category": "Injury"
+    },
+    {
+      "id": 5,
+      "title": "Sprain",
+      "category": "Injury"
+    },
+    {
+      "id": 6,
+      "title": "Fever",
+      "category": "Common Condition"
+    },
+    {
+      "id": 7,
+      "title": "Dehydration",
+      "category": "Common Condition"
+    },
+    {
+      "id": 8,
+      "title": "Food Poisoning",
+      "category": "Common Condition"
+    },
+    {
+      "id": 9,
+      "title": "Nosebleed",
+      "category": "Emergency"
+    },
+    {
+      "id": 10,
+      "title": "Fainting",
+      "category": "Emergency"
+    },
+    {
+      "id": 11,
+      "title": "Choking",
+      "category": "Emergency"
+    },
+    {
+      "id": 12,
+      "title": "Heat Exhaustion",
+      "category": "Emergency"
+    },
+    {
+      "id": 13,
+      "title": "Allergic Reaction",
+      "category": "Emergency"
+    },
+    {
+      "id": 14,
+      "title": "Diarrhea",
+      "category": "Common Condition"
+    },
+    {
+      "id": 15,
+      "title": "Snake Bite",
+      "category": "Emergency"
+    }
+  ]
+}
+```

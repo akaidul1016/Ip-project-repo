@@ -1,0 +1,484 @@
+
+/* ==================== RESET ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #f8fafc;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ==================== NAVBAR ==================== */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.logo span {
+    color: #0ea5a4;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #0ea5a4;
+}
+
+
+/* ==================== HOME ==================== */
+
+.home-section {
+    min-height: 650px;
+    padding: 70px 7%;
+    background: #ecfeff;
+    display: flex;
+    align-items: center;
+}
+
+.home-content {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.home-text h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+.home-text h1 span {
+    color: #0ea5a4;
+}
+
+.home-text p {
+    max-width: 520px;
+    font-size: 18px;
+    color: #4b5563;
+    margin-bottom: 30px;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #0ea5a4;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #0f766e;
+}
+
+.emergency-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.emergency-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* ==================== HOSPITAL SLIDER ==================== */
+
+.hospital-slider {
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #d1d5db;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.hospital-slider > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 70px 25px 25px;
+    color: white;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.8)
+    );
+}
+
+.slider-overlay h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.slider-overlay p {
+    font-size: 15px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    color: #111827;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.slider-btn:hover {
+    background: white;
+}
+
+.previous {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+
+/* ==================== GENERAL SECTION ==================== */
+
+.section {
+    padding: 90px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.section-label {
+    color: #0ea5a4;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: #6b7280;
+}
+
+
+/* ==================== CARDS ==================== */
+
+.card-container {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: #111827;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 16px;
+    border-radius: 6px;
+    background: #0ea5a4;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-link:hover {
+    background: #0f766e;
+}
+
+
+/* ==================== HOSPITAL ==================== */
+
+.hospital-section {
+    background: white;
+}
+
+
+/* ==================== AMBULANCE ==================== */
+
+.ambulance-section {
+    background: #fff7f7;
+}
+
+.ambulance-image {
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+    margin: 0 auto 50px;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.ambulance-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.available {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.unavailable {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #fee2e2;
+    color: #991b1b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* ==================== GUIDE ==================== */
+
+.guide-section {
+    background: #f0fdfa;
+}
+
+.guide-card {
+    padding: 25px;
+}
+
+.guide-number {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ccfbf1;
+    color: #0f766e;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.guide-card h3 {
+    margin-bottom: 8px;
+}
+
+.guide-category {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0ea5a4;
+}
+
+
+/* ==================== FOOTER ==================== */
+
+.footer {
+    padding: 45px 7%;
+    text-align: center;
+    background: #111827;
+    color: #d1d5db;
+}
+
+.footer .logo {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .home-content {
+        grid-template-columns: 1fr;
+    }
+
+    .home-text {
+        text-align: center;
+    }
+
+    .home-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home-buttons {
+        justify-content: center;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .home-section {
+        padding: 50px 5%;
+    }
+
+    .home-text h1 {
+        font-size: 40px;
+    }
+
+    .hospital-slider {
+        height: 320px;
+    }
+
+    .section {
+        padding: 60px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
