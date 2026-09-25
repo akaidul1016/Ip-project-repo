@@ -1,6 +1,7 @@
 fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
+
     const render = (id, items, template) => {
       document.getElementById(id).innerHTML = items.map(template).join("");
     };
@@ -30,64 +31,34 @@ fetch("data.json")
     `);
 
     // Ambulances
-    
-    document.getElementById("ambulance-container").innerHTML = data.ambulances
-      .map(
-        (ambulance) => `
-                <div class="card">
-                    <div class="card-content">
-                        <h3>${ambulance.driverName}</h3>
-                        <p>Ambulance: ${ambulance.ambulanceNumber}</p>
-                        <p>Location: ${ambulance.location}</p>
-                        <p>Mobile: ${ambulance.mobileNumber}</p>
+    render("ambulance-container", data.ambulances, (ambulance) => `
+      <div class="card">
+        <div class="card-content">
+          <h3>${ambulance.driverName}</h3>
+          <p>Ambulance: ${ambulance.ambulanceNumber}</p>
+          <p>Location: ${ambulance.location}</p>
+          <p>Mobile: ${ambulance.mobileNumber}</p>
+          <span class="${ambulance.available ? "available" : "unavailable"}">
+            ${ambulance.available ? "Available" : "Unavailable"}
+          </span>
+        </div>
+      </div>
+    `);
 
-                        <span class="available">Available</span>
-                    </div>
-                </div>
-            `,
-      )
-      .join("");
+    // Medicine
+    render("medicine-container", data.medicineStores, (store) => `
+      <a href="${store.website}" target="_blank" class="card">
+        <img src="${store.image}" class="card-image">
+        <div class="card-content">
+          <h3>${store.name}</h3>
+          <p>${store.description}</p>
+          <p>${store.category}</p>
+          <span class="card-link">Visit Website</span>
+        </div>
+      </a>
+    `);
 
-
-      // Medicine & Medical Equipment
-document.getElementById("medicine-container").innerHTML =
-  data.medicineStores
-    .map(
-      (store) => `
-        <a href="${store.website}"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="card">
-
-          <img
-            src="${store.image}"
-            class="card-image"
-            alt="${store.name}"
-          >
-
-          <div class="card-content">
-            <h3>${store.name}</h3>
-
-            <p>${store.description}</p>
-
-            <span class="guide-category">
-              ${store.category}
-            </span>
-
-            <br>
-
-            <span class="card-link">
-              Visit Website
-            </span>
-          </div>
-
-        </a>
-      `,
-    )
-    .join("");
-
-
-    // Medical guides
+    // Medical Guides
     render("guide-container", data.medicalGuides, (guide) => `
       <a href="${guide.website}" target="_blank" class="card">
         <div class="card-content">
@@ -98,18 +69,53 @@ document.getElementById("medicine-container").innerHTML =
       </a>
     `);
 
-    // Hospital slideshow
+    // Slideshow
     let slide = 0;
 
-    const showHospital = () => {
-      const hospital = data.hospitals[slide];
+    function showHospital() {
+      document.getElementById("hospital-slider-image").src =
+        data.hospitals[slide].image;
 
-      document.getElementById("hospital-slider-image").src = hospital.image;
-      document.getElementById("hospital-slider-name").textContent = hospital.name;
+      document.getElementById("hospital-slider-name").textContent =
+        data.hospitals[slide].name;
+    }
 
-      slide = (slide + 1) % data.hospitals.length;
-    };
+    // Previous
+    document.getElementById("previous-slide").addEventListener("click", () => {
+      slide--;
+
+      if (slide < 0) {
+        slide = data.hospitals.length - 1;
+      }
+
+      showHospital();
+    });
+
+    // Next
+    document.getElementById("next-slide").addEventListener("click", () => {
+      slide++;
+
+      if (slide >= data.hospitals.length) {
+        slide = 0;
+      }
+
+      showHospital();
+    });
 
     showHospital();
-    setInterval(showHospital, 2000);
+
+    // Automatic slideshow
+    setInterval(() => {
+      slide++;
+
+      if (slide >= data.hospitals.length) {
+        slide = 0;
+      }
+
+      showHospital();
+    }, 2000);
+
+  })
+  .catch((error) => {
+    console.error("Failed to load data:", error);
   });
