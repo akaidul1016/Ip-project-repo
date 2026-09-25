@@ -1,9 +1,11 @@
 fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
-    const render = (id, items, template) => {
-      document.getElementById(id).innerHTML = items.map(template).join("");
-    };
+    
+  })
+  .catch((error) => {
+    console.error("Failed to load data:", error);
+  });
 
     // Doctors
     render("doctor-container", data.doctors, (doctor) => `
