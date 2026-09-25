@@ -30,7 +30,7 @@ fetch("data.json")
     `);
 
     // Ambulances
- HEAD
+ 
     document.getElementById("ambulance-container").innerHTML = data.ambulances
       .map(
         (ambulance) => `
@@ -50,8 +50,8 @@ fetch("data.json")
 
 
       // Medicine & Medical Equipment
-document.getElementById("medicine-container").innerHTML =
-  data.medicineStores
+    document.getElementById("medicine-container").innerHTML =
+    data.medicineStores
     .map(
       (store) => `
         <a href="${store.website}"
