@@ -30,23 +30,22 @@ fetch("data.json")
     `);
 
     // Ambulances
- 
-    document.getElementById("ambulance-container").innerHTML = data.ambulances
-      .map(
-        (ambulance) => `
-                <div class="card">
-                    <div class="card-content">
-                        <h3>${ambulance.driverName}</h3>
-                        <p>Ambulance: ${ambulance.ambulanceNumber}</p>
-                        <p>Location: ${ambulance.location}</p>
-                        <p>Mobile: ${ambulance.mobileNumber}</p>
 
-                        <span class="available">Available</span>
-                    </div>
-                </div>
-            `,
-      )
-      .join("");
+   document.getElementById("ambulance-container").innerHTML = data.ambulances
+  .map(
+    (ambulance) => `
+      <div class="card">
+        <div class="card-content">
+          <h3>${ambulance.driverName}</h3>
+          <p>Ambulance: ${ambulance.ambulanceNumber}</p>
+          <p>Location: ${ambulance.location}</p>
+          <p>Mobile: ${ambulance.mobileNumber}</p>
+          <span class="available">Available</span>
+        </div>
+      </div>
+    `,
+  )
+  .join("");
 
 
       // Medicine & Medical Equipment
