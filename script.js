@@ -30,7 +30,7 @@ fetch("data.json")
     `);
 
     // Ambulances
- HEAD
+    
     document.getElementById("ambulance-container").innerHTML = data.ambulances
       .map(
         (ambulance) => `
